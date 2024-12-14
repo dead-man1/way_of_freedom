@@ -1,0 +1,3051 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دانشنامه آزاد غیر متمرکز دسترسی به اینترنت آزاد">
+      
+      
+        <meta name="author" content="sarina esmailzadeh">
+      
+      
+        <link rel="canonical" href="https://filtershekan.sbs/Wireguard/">
+      
+      
+        <link rel="prev" href="../Warp/">
+      
+      
+        <link rel="next" href="../Worker/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="خوراک آراس‌اس" href="../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="خوراک آراساس محتویات به‌روز شده" href="../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.5">
+    
+    
+      
+        <title>وایرگارد - سایت فیلترشکن</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vazirmatn:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Vazirmatn";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/site.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          پرش به محتویات
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href="https://filtershekan.sbs/" title="سایت فیلترشکن" class="md-header__button md-logo" aria-label="سایت فیلترشکن" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            سایت فیلترشکن
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              وایرگارد
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="انتخاب زبان">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/fa/" hreflang="fa" class="md-select__link">
+              فارسی
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="جستجو" placeholder="جستجو" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="جستجو">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="هم‌رسانی" aria-label="هم‌رسانی" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="بازنشانی" aria-label="بازنشانی" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            راه‌اندازی جستجو
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/majidrezarahnavard/way_of_freedom" title="رفتن به مخزن" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    majidrezarahnavard/way_of_freedom
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="زبانه‌ها" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  سایت فیلترشکن VPN
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Application/" class="md-tabs__link">
+        
+  
+    
+  
+  نرم افزارها
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../BPB/" class="md-tabs__link">
+        
+  
+    
+  
+  BPB
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Bepass/" class="md-tabs__link">
+        
+  
+    
+  
+  Bepass
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Best/" class="md-tabs__link">
+        
+  
+    
+  
+  جمع بندی
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Brook/" class="md-tabs__link">
+        
+  
+    
+  
+  Brook
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Buy/" class="md-tabs__link">
+        
+  
+    
+  
+  پرداخت
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Clients/" class="md-tabs__link">
+        
+  
+    
+  
+  کلاینت ها
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Cloak/" class="md-tabs__link">
+        
+  
+    
+  
+  Cloak
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../CloudFlare/" class="md-tabs__link">
+        
+  
+    
+  
+  کلود فلیر
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Converter/" class="md-tabs__link">
+        
+  
+    
+  
+  مبدل
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Critical_Situation/" class="md-tabs__link">
+        
+  
+    
+  
+  بحران
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../DNS/" class="md-tabs__link">
+        
+  
+    
+  
+  DNS
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Direct/" class="md-tabs__link">
+        
+  
+    
+  
+  مستقیم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Donate/" class="md-tabs__link">
+        
+  
+    
+  
+  Donate
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Experience/" class="md-tabs__link">
+        
+  
+    
+  
+  تجربه
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Fastly/" class="md-tabs__link">
+        
+  
+    
+  
+  Fastly
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Film/" class="md-tabs__link">
+        
+  
+    
+  
+  فیلم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Fragment/" class="md-tabs__link">
+        
+  
+    
+  
+  فرگمنت
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Free/" class="md-tabs__link">
+        
+  
+    
+  
+  کانفیگ رایگان
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Gcore/" class="md-tabs__link">
+        
+  
+    
+  
+  Gcore
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Hiddify/" class="md-tabs__link">
+        
+  
+    
+  
+  Hiddify
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Home_Server/" class="md-tabs__link">
+        
+  
+    
+  
+  میکروتیک
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../IPV6/" class="md-tabs__link">
+        
+  
+    
+  
+  IPV6
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Internal_Server/" class="md-tabs__link">
+        
+  
+    
+  
+  تانل
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Iran_Ip/" class="md-tabs__link">
+        
+  
+    
+  
+  Ip Iran
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Knowledge_Base/" class="md-tabs__link">
+        
+  
+    
+  
+  دانشنامه
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Money/" class="md-tabs__link">
+        
+  
+    
+  
+  اقتصاد فیلترشکن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Network/" class="md-tabs__link">
+        
+  
+    
+  
+  شبکه
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Oblivion/" class="md-tabs__link">
+        
+  
+    
+  
+  Oblivion
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../OpenVPN/" class="md-tabs__link">
+        
+  
+    
+  
+  OpenVPN
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Oracle/" class="md-tabs__link">
+        
+  
+    
+  
+  کلود اوراکل
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Other/" class="md-tabs__link">
+        
+  
+    
+  
+  Other
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Panel/" class="md-tabs__link">
+        
+  
+    
+  
+  پنل ها
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../People/" class="md-tabs__link">
+        
+  
+    
+  
+  عوامل
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Primary/" class="md-tabs__link">
+        
+  
+    
+  
+  مقدماتی
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Protection/" class="md-tabs__link">
+        
+  
+    
+  
+  Protection
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Proxy_Chain/" class="md-tabs__link">
+        
+  
+    
+  
+  proxy chain
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Record/" class="md-tabs__link">
+        
+  
+    
+  
+  رکورد
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Research/" class="md-tabs__link">
+        
+  
+    
+  
+  تحقیقات
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Security/" class="md-tabs__link">
+        
+  
+    
+  
+  امنیت سرور
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Singbox/" class="md-tabs__link">
+        
+  
+    
+  
+  Singbox
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Starlink/" class="md-tabs__link">
+        
+  
+    
+  
+  استارلینک
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Tahrimshecan/" class="md-tabs__link">
+        
+  
+    
+  
+  شکن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Telegram/" class="md-tabs__link">
+        
+  
+    
+  
+  Telegram
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Tips/" class="md-tabs__link">
+        
+  
+    
+  
+  Tips
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Twitter/" class="md-tabs__link">
+        
+  
+    
+  
+  توییتر
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../UDP/" class="md-tabs__link">
+        
+  
+    
+  
+  UDP
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../VPNhood/" class="md-tabs__link">
+        
+  
+    
+  
+  VPNHOOD
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Warp/" class="md-tabs__link">
+        
+  
+    
+  
+  وارپ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  وایرگارد
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Worker/" class="md-tabs__link">
+        
+  
+    
+  
+  Worker
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Working_Now/" class="md-tabs__link">
+        
+  
+    
+  
+  الان
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Xray/" class="md-tabs__link">
+        
+  
+    
+  
+  xray
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Yebekhe/" class="md-tabs__link">
+        
+  
+    
+  
+  Yebekhe
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://filtershekan.sbs/" title="سایت فیلترشکن" class="md-nav__button md-logo" aria-label="سایت فیلترشکن" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    سایت فیلترشکن
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/majidrezarahnavard/way_of_freedom" title="رفتن به مخزن" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    majidrezarahnavard/way_of_freedom
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    سایت فیلترشکن VPN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    نرم افزارها
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BPB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BPB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bepass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bepass
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Best/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    جمع بندی
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Brook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Brook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Buy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    پرداخت
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Clients/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    کلاینت ها
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cloak/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloak
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CloudFlare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    کلود فلیر
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Converter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    مبدل
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Critical_Situation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    بحران
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DNS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DNS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Direct/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    مستقیم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Donate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Donate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Experience/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تجربه
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Fastly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fastly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Film/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    فیلم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Fragment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    فرگمنت
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Free/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    کانفیگ رایگان
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gcore/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gcore
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hiddify/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hiddify
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home_Server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    میکروتیک
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IPV6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPV6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Internal_Server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تانل
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Iran_Ip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ip Iran
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Knowledge_Base/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    دانشنامه
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Money/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    اقتصاد فیلترشکن
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    شبکه
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Oblivion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Oblivion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenVPN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenVPN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Oracle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    کلود اوراکل
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Other/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Panel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    پنل ها
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../People/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    عوامل
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Primary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    مقدماتی
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Protection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Proxy_Chain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    proxy chain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Record/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    رکورد
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Research/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تحقیقات
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    امنیت سرور
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Singbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Singbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Starlink/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    استارلینک
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tahrimshecan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    شکن
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Telegram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Telegram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tips/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Twitter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    توییتر
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UDP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UDP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VPNhood/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VPNHOOD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Warp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    وارپ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    وایرگارد
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    وایرگارد
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wireguard-go" class="md-nav__link">
+    Wireguard go
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patched-wireguard" class="md-nav__link">
+    Patched Wireguard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wireguard" class="md-nav__link">
+    Wireguard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warp-plus" class="md-nav__link">
+    warp-plus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    یه آموزش که بتونیم کانفیگ وایرگارد کلودفلری که برنامه نکوباکس اندروید میسازه،
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rethink" class="md-nav__link">
+    rethink
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    روش جدید ساخت سرور وایرگارد با کمک تانل و نکوری + روتینگ بین سرور ایران و خارج
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    آموزش راه اندازی وی پی ان سرور وایرگارد برای دسترسی به اینترنت بدون مرز
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    وایرگارد با همراه اول
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    ایرانسل
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    وایرگارد وارپ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    کانفیگ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reserved" class="md-nav__link">
+    reserved
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    ویرگارد
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    وایرگارد وارپ پلاس
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wireguard-patched" class="md-nav__link">
+    wireguard patched
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shadowtls" class="md-nav__link">
+    روش shadowtls + وایرگارد
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wireguard-reserved-v2ray" class="md-nav__link">
+    ساخت کانفیگ WireGuard با Reserved برای V2ray.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    استفاده از وایرگارد
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-tools" class="md-nav__link">
+    معرفی برنامه D-Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    کلاینت اصلی وایرگارد رو با هسته ایکس ری ترکیب کنم
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#singbox" class="md-nav__link">
+    singbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wireguard-poroto" class="md-nav__link">
+    wireguard + poroto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    آموزش وایرگارد با بهینه سازی و اسکیریپت جدید🥰
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vpn-wireguard" class="md-nav__link">
+    ساخت VPN با WireGuard برای خط مخابرات
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    روی مخابرات و ایرانسل از وایرگارد برای اتصال استفاده کنید با اسکریپت زیر وایرگارد بسازید
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Worker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Worker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Working_Now/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    الان
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Xray/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    xray
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Yebekhe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Yebekhe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wireguard-go" class="md-nav__link">
+    Wireguard go
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patched-wireguard" class="md-nav__link">
+    Patched Wireguard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wireguard" class="md-nav__link">
+    Wireguard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warp-plus" class="md-nav__link">
+    warp-plus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    یه آموزش که بتونیم کانفیگ وایرگارد کلودفلری که برنامه نکوباکس اندروید میسازه،
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rethink" class="md-nav__link">
+    rethink
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    روش جدید ساخت سرور وایرگارد با کمک تانل و نکوری + روتینگ بین سرور ایران و خارج
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    آموزش راه اندازی وی پی ان سرور وایرگارد برای دسترسی به اینترنت بدون مرز
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    وایرگارد با همراه اول
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    ایرانسل
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    وایرگارد وارپ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    کانفیگ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reserved" class="md-nav__link">
+    reserved
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    ویرگارد
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    وایرگارد وارپ پلاس
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wireguard-patched" class="md-nav__link">
+    wireguard patched
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shadowtls" class="md-nav__link">
+    روش shadowtls + وایرگارد
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wireguard-reserved-v2ray" class="md-nav__link">
+    ساخت کانفیگ WireGuard با Reserved برای V2ray.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    استفاده از وایرگارد
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-tools" class="md-nav__link">
+    معرفی برنامه D-Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    کلاینت اصلی وایرگارد رو با هسته ایکس ری ترکیب کنم
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#singbox" class="md-nav__link">
+    singbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wireguard-poroto" class="md-nav__link">
+    wireguard + poroto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    آموزش وایرگارد با بهینه سازی و اسکیریپت جدید🥰
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vpn-wireguard" class="md-nav__link">
+    ساخت VPN با WireGuard برای خط مخابرات
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    روی مخابرات و ایرانسل از وایرگارد برای اتصال استفاده کنید با اسکریپت زیر وایرگارد بسازید
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/majidrezarahnavard/way_of_freedom/edit/main/docs/Wireguard.md" title="این صفحه را ویرایش کنید" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="_1">وایرگارد</h1>
+<p>WireGuard® is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache. It intends to be considerably more performant than OpenVPN. WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many different circumstances. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable. It is currently under heavy development, but already it might be regarded as the most secure, easiest to use, and simplest VPN solution in the industry.</p>
+<p>WireGuard® یک VPN بسیار ساده و در عین حال سریع و مدرن است که از رمزنگاری پیشرفته استفاده می کند. هدف آن این است که سریع‌تر، ساده‌تر، باریک‌تر و مفیدتر از IPsec باشد و در عین حال از سردردهای شدید جلوگیری کند. قصد دارد عملکرد قابل توجهی بیشتری نسبت به OpenVPN داشته باشد. WireGuard به عنوان یک VPN با هدف عمومی برای اجرای بر روی رابط های تعبیه شده و رایانه های فوق العاده به طور یکسان طراحی شده است که برای شرایط مختلف مناسب است. در ابتدا برای هسته لینوکس منتشر شد، اما اکنون به صورت چند پلتفرمی (ویندوز، macOS، BSD، iOS، Android) و به طور گسترده قابل استقرار است. در حال حاضر در حال توسعه شدید است، اما در حال حاضر ممکن است به عنوان امن ترین، ساده ترین و ساده ترین راه حل VPN در صنعت در نظر گرفته شود.</p>
+<p><a href="https://www.wireguard.com/">wireguard</a></p>
+<p>این متن حاوی اطلاعات جامعی درباره پروتکل VPN وایرگارد (WireGuard) است. نکات کلیدی عبارتند از:</p>
+<ol>
+<li>
+<p>معرفی وایرگارد به عنوان یک VPN ساده، سریع و مدرن با رمزنگاری پیشرفته.</p>
+</li>
+<li>
+<p>مزایای وایرگارد نسبت به IPsec و OpenVPN، از جمله سرعت و سادگی بیشتر.</p>
+</li>
+<li>
+<p>قابلیت استفاده در پلتفرم‌های مختلف مانند لینوکس، ویندوز، macOS، iOS و اندروید.</p>
+</li>
+<li>
+<p>روش‌های مختلف نصب و پیکربندی وایرگارد، از جمله استفاده از اسکریپت‌های خودکار.</p>
+</li>
+<li>
+<p>ترکیب وایرگارد با سرویس‌هایی مانند Cloudflare WARP برای بهبود عملکرد.</p>
+</li>
+<li>
+<p>نحوه استفاده از وایرگارد در شرایط فیلترینگ اینترنت، مخصوصاً در ایران.</p>
+</li>
+<li>
+<p>ابزارها و نرم‌افزارهای مفید برای کار با وایرگارد، مانند Hiddify و برنامه‌های موبایل.</p>
+</li>
+<li>
+<p>تکنیک‌های پیشرفته مانند استفاده از Reserved IP و تنظیمات MTU برای بهبود عملکرد.</p>
+</li>
+<li>
+<p>مقایسه وایرگارد با سایر پروتکل‌های VPN و کاربردهای خاص آن، مثل استفاده برای معامله‌گران ارز دیجیتال.</p>
+</li>
+<li>
+<p>منابع و آموزش‌های تکمیلی برای یادگیری بیشتر درباره وایرگارد.</p>
+</li>
+<li></li>
+</ol>
+<h2 id="wireguard-go">Wireguard go</h2>
+<p><a href="https://github.com/bepass-org/wireguard-go/releases/tag/v1.0.4-rc2">wireguard-go</a>
+<a href="https://threadreaderapp.com/thread/1759816946474766832.html">خیلی ساده برین توی گیت هاب BePass و فایل مربوط به سیستمتون رو دانلود کنید :</a></p>
+<h2 id="patched-wireguard">Patched Wireguard</h2>
+<p><a href="https://www.youtube.com/watch?v=TS09YzcTIb4"> مقابله با فیلترینگ دامنه و آیپی توسط روش بسیار سریع Patched Wireguard ضد اختلال، راحت و با پینگ عالی </a></p>
+<h2 id="wireguard">Wireguard</h2>
+<p><a href="https://ivpn.pro/how-to/wireguard-vpn/">ساخت VPN با پروتکل WireGuard</a></p>
+<h2 id="warp-plus">warp-plus</h2>
+<p>نسخه جدید warp-plus منتشر شد! 🎉 (v1.1.0)</p>
+<p>پروژه‌های  یوسف_قبادی رو ادامه میدیم و فراموشش نمی‌کنیم!</p>
+<p><a href="https://github.com/bepass-org/warp-plus">warp-plus</a></p>
+<h2 id="_2">یه آموزش که بتونیم کانفیگ وایرگارد کلودفلری که برنامه نکوباکس اندروید میسازه،</h2>
+<p><a href="https://threadreaderapp.com/thread/1771625299777577332.html">یه آموزش که بتونیم کانفیگ وایرگارد کلودفلری که برنامه نکوباکس اندروید میسازه،</a></p>
+<h2 id="rethink">rethink</h2>
+<p><a href="https://threadreaderapp.com/thread/1771579790400667779.html">قبلاً من آموزش برنامه rethink را گذاشتم اما الان که وایرگارد کار می‌کنه یکی از بهترین راهها برای استفاده از وایرگارد هستش</a></p>
+<p><a href="https://twitter.com/amin_o__o/status/1783899733997531596">DOH1</a></p>
+<p><a href="https://twitter.com/amin_o__o/status/1783904037491847381">DOH2</a></p>
+<h2 id="_3">روش جدید ساخت سرور وایرگارد با کمک تانل و نکوری + روتینگ بین سرور ایران و خارج</h2>
+<p><a href="https://www.youtube.com/watch?v=XDyY4b-q8aA"> روش جدید ساخت سرور وایرگارد با کمک تانل و نکوری + روتینگ بین سرور ایران و خارج </a></p>
+<p>سلام رفقا تو این اموزش سعی کردم توضیح بدم چطوری میتونید با روش تانل نکوری یک سرور وایرگارد راه اندازی کنید لطفا توضیحات ویدیو رو کامل ببینید و به کاربرهاتون کانفیگ بدید در نظر داشته باشید این پنل قابلیت مدیریت کاربر نداره اما شما میتونید با همین روش پنلهای دیگه نصب کنید که مدیریت کاربر داشته باشه در نهایت یک سیستم روتینگ کانفیگ میکنیم رو نکوری اینجوری اگه کاربر وارد سایت ایرانی بشه ای پی سرور ایران نمایش داده میشه و همه سایت های ایرانی باز میشه اگر هم وارد سایت خارجی بشه ای پی سرور خارجی مورد استفاده قرار میگیره این یه مزیت مهم برای کساییه کانفیگ میفروشن</p>
+<h2 id="_4">آموزش راه اندازی وی پی ان سرور وایرگارد برای دسترسی به اینترنت بدون مرز</h2>
+<p>آموزش جامع نصب و راه اندازی Wireguard VPN Server در ابونتو لینوکس</p>
+<p><a href="https://www.youtube.com/watch?v=LbPZHjQuTF8">آموزش راه اندازی وی پی ان سرور وایرگارد برای دسترسی به اینترنت بدون مرز </a></p>
+<h2 id="_5">وایرگارد با همراه اول</h2>
+<p>وایرگارد با همراه اول 
+ابتدا یک کانفیگ وایرگارد singbox config رو طبق کلیپ درست میکنیم 
+بعد تبدیلش میکنیم به کانفیگ
+singbox outbound
+اما چطور؟ طبق کلیپ هیچ حرکت اضافه ای لازم نیس
+تنها چیزی که برای ما مهمه همین ساختن
+ singbox outbound</p>
+<p><a href="https://threadreaderapp.com/thread/1776976000032604597.html">وایرگارد با همراه اول </a></p>
+<h2 id="_6">ایرانسل</h2>
+<p>روی ایرانسل مثل عکس یک کانفیگ وایرگارد بسازید جای سرور آدرس 
+<a href="http://zula.ir">http://zula.ir</a>
+را بزنید فعلاً جواب می‌ده 😔 ببخشید ای کاش توانایی بیشتری داشتم 😞 اگر شرایط همینجوری بمونه باید یک فکر اساسی کرد</p>
+<p><a href="https://twitter.com/amin_o__o/status/1790828468839518681">twitter</a></p>
+<h2 id="_7">وایرگارد وارپ</h2>
+<p>توئیت ها یکم در هم شد اینجا از اول میگم..
+برای استفاده از وایرگارد وارپ من به ترتیب زیر عمل کردم.</p>
+<p>-پیش نیاز نرم افزار termux
+بعد از اجرای ترموکس کامند زیر رو کپی و اجرا کنید،</p>
+<p><a href="https://threadreaderapp.com/thread/1663420256486924288.html">twitter</a></p>
+<p>یادتون میاد وارپ پلاس رو توی ترموکس ران کرده بودیم؟</p>
+<p>الان با اسکن و پیدا کردن ip تمیز وارپ میتونید بازم از وارپ پلاس استفاده کنید.</p>
+<p>حتی روی مخابرات 😉</p>
+<p>نمونه دستور 👇</p>
+<p>./warp-plus -e 188.114.96.61:945</p>
+<p>در ضمن اگه روی اینترنت همراه IPv6 دارین این دستور رو بزنید</p>
+<p>./warp-plus --scan</p>
+<p><a href="https://x.com/Eagle_1157/status/1793150032348094552">twitter</a></p>
+<p>حتماً قسمت help رو چک کنید، چیزهای جالبی توشه.
+مثلاً میتونی scan رو محدود کنی به IPv4 یا IPv6.
+میتونی با rtt به scan بگی که فقط IP بده که پینگش کمتر از عددی که بهش میدی.
+مثلاً اگه می‌خوای وصل بشی به IPv4 و آی پی که برات انتخاب کنه پینگش زیر ۳۰۰ باشه:
+warp-plus.exe -4 --scan --rtt 300ms</p>
+<p>اینم بگم که به زودی یه ریلیز جدید میاد، چندتا قابلیت جدید بهش اضافه میشه</p>
+<h2 id="_8">کانفیگ</h2>
+<p>این کانفیگ وایرگارد هنوز روی همراه اول و برنامه hiddify جواب میده برای خودتان شخصی سازی کنید و این ip و port بهترین هستش که هنوز جواب می‌ده 
+162.159.195.133:942</p>
+<p><a href="https://github.com/amin4139/share_file/blob/main/Hiddify%2B">config</a></p>
+<h2 id="reserved">reserved</h2>
+<p>خوب بریم برای آموزش. بچه‌ها reserved بسیار بسیار توی اینترنت ایران و چین مهم هستش. من یک کانفیگ sing-box گرفتم از این وبسایت</p>
+<p>من کانفیگ معمولی گرفتم و عدد ۱ انتخاب کردم شما بهتره پلاس درست کنید .</p>
+<p><a href="https://threadreaderapp.com/thread/1663932439863992327.html">twitter</a></p>
+<h2 id="_9">ویرگارد</h2>
+<p>با کسب اجازه برای توضیح بیشتر 
+در تصویر 2 مقادیر مشخص شده را باید با مقدار دریافتی از کانفیگ سایت Replit، جایگزین کنید. در نهایت کل کانفیگ را کپی و به Hiddify با استفاده از Add from clipboard اضافه کنید.
+لینک Replit برای Private Key و Reserved <a href="https://replit.com/@misaka-blog/warpgo-sbfile-generator?v=1">https://replit.com/@misaka-blog/warpgo-sbfile-generator?v=1</a>
+ارادت</p>
+<p><a href="https://x.com/__Revenantism__/status/1793789702325080443">twitter</a></p>
+<h2 id="_10">وایرگارد وارپ پلاس</h2>
+<p>یه زمانی اکانهای سورفشارک زیاد بود و بیشتر هم شادوساکس !!
+الان روشی هست که اکانتهای وایرگاردش رو دربیاریم ؟</p>
+<p>خیالی عالی میشه با وارپ -پلاس از اینا استفاده کرد 🤔
+حتی سرویس دهنده های دیگه که وایرگارد میدن ، مثل aeza ..</p>
+<p><a href="https://threadreaderapp.com/thread/1793527194742149214.html">twitter</a></p>
+<h2 id="wireguard-patched">wireguard patched</h2>
+<p>روش  wireguard patched    وایگارد -&gt; سرور</p>
+<p>پنل ثنایی (سرور) + کانفیگ Vless + هدیفای (کلاینت) + وارپ</p>
+<p>این روش یک سرور می خواهد. دامنه یا ای پی کثیف کافیه.
+خوبیش اینکه با روش وایگارد ای پی خودتون می افته و اگر هم فیلتر بشه ای پی وایگارد فیلتر میشه</p>
+<p><a href="https://www.youtube.com/watch?v=K4aFv2OWFbI&amp;t=64s">youtube</a></p>
+<h2 id="shadowtls">روش  shadowtls  + وایرگارد</h2>
+<p>با اسکریپت @aleskxyz 
+اول shadowtls رو نصب کنید روی سرور.
+وارپ رو با هدیفای @hiddify_com  بزارید که ای پی سرور فیلتر نشه. ( بدون وایرگارد هم کار می کنه)</p>
+<p><a href="https://github.com/aleskxyz/reality-ezpz">https://github.com/aleskxyz/reality-ezpz</a></p>
+<p>آموزش قدیمی
+<a href="https://www.youtube.com/watch?v=T_p9VqngfY8&amp;t=117s">https://www.youtube.com/watch?v=T_p9VqngfY8&amp;t=117s</a></p>
+<h2 id="wireguard-reserved-v2ray">ساخت کانفیگ WireGuard با Reserved برای V2ray.</h2>
+<p>به زودی ...</p>
+<p>کجا قرار بدم به نظرتون؟ کنار اسکنر wrap به عنوان گزینه 4 چطوره؟
+درخواستی بود بعد از چندین ساعت تلاش بالاخره درستش کردم.</p>
+<p><a href="https://x.com/29peyman/status/1794836515832615329">twitter</a></p>
+<h2 id="_11">استفاده از وایرگارد</h2>
+<p>می دونستید کانفیگ های وایرگارد رو می تونید مستقیم توی نرم افزار مهسا استفاده کنید؟</p>
+<p>آموزش وایگارد
+<a href="https://filtershekan.sbs/Wireguard/">https://filtershekan.sbs/Wireguard/</a></p>
+<p>کانفیگ ها وایگارد برای تست
+<a href="https://t.me/freewireguard">https://t.me/freewireguard</a></p>
+<p>نرم افزار مهسا</p>
+<p><a href="https://play.google.com/store/apps/details?id=com.MahsaNet.MahsaNG&amp;hl=en">https://play.google.com/store/apps/details?id=com.MahsaNet.MahsaNG&amp;hl=en</a></p>
+<h2 id="d-tools">معرفی برنامه D-Tools</h2>
+<p>ساخت کانفیگ وایرگارد وارپ
+و پیدا کردن ای پی تمیز برای ورکر</p>
+<p><a href="https://x.com/horizonbehind2/status/1802752957391294571">twitter</a></p>
+<h2 id="_12">کلاینت اصلی وایرگارد رو با هسته ایکس ری ترکیب کنم</h2>
+<p>تو این روش میخوام کلاینت اصلی وایرگارد رو با هسته ایکس ری ترکیب کنم ، 
+مزیتش استفاده از vpn وایرگارد هست و تانل کردن کل سیستم ، کیفیتش هم توی تست ها خوب بود 👌</p>
+<p><a href="https://t.me/myuploadch/204">https://t.me/myuploadch/204</a></p>
+<h2 id="singbox">singbox</h2>
+<p><a href="https://www.youtube.com/watch?si=AfSxdVK3PJUnXe2i&amp;v=-ZBvxI32mro&amp;feature=youtu.be">https://www.youtube.com/watch?si=AfSxdVK3PJUnXe2i&amp;v=-ZBvxI32mro&amp;feature=youtu.be</a></p>
+<h2 id="wireguard-poroto">wireguard + poroto</h2>
+<p>درود به دوستان آموزش ساخت وایگراد با سرور پروتون:
+دوستان برای وارد شدن به سایت پروتون وی پی ان وصل باشه🤍
+(دوستان تست هستش این حالت و باگ داره قطعا اگر مشکلی خوردید به من بگید تا مشکلات رو برطرف کنم)</p>
+<p><a href="https://x.com/amirparsaxs/status/1823118971068887241">https://x.com/amirparsaxs/status/1823118971068887241</a></p>
+<h2 id="_13">آموزش وایرگارد با بهینه سازی و اسکیریپت جدید🥰</h2>
+<p>(Mtu=1306)</p>
+<p><a href="https://x.com/amirparsaxs/status/1831620252787958002">https://x.com/amirparsaxs/status/1831620252787958002</a></p>
+<h2 id="vpn-wireguard">ساخت VPN با WireGuard برای خط مخابرات</h2>
+<p>مینی آموزش ۱:
+ساخت VPN با WireGuard برای خط مخابرات</p>
+<p>مواد لازم:
+-سرور شخصی مجازی (VPS) با IP تمیز
+فرض بر اینه که شما یه سرور دارید و این رو در کنار بقیه‌ی روش‌ها و پروتکل‌ها استفاده خواهید کرد.</p>
+<p>کیفیت خروجیِ کار:
+آپلود/دانلود ۷ از ۱۰ - پینگ و جیتر: ۱۰ از ۱۰</p>
+<p>خط اینترنت:
+من فقط توانستم روی مخابرات راه‌اندازی کنم.
+روی همراه اول کار نمی‌کنه.
+با ایرانسل تست نکردم.</p>
+<p>مخاطبین این روش:
+همه ولی بیشتر به درد تریدرها می‌خوره.
+با وضع اکنون فیلترینگ، روش‌هایی مثل بروک و هیستریا ۲ دانلود/آپلود بهتری دارند.</p>
+<p>چرا میگی واسه تریدرها؟
+چون تریدرها به بیشترین حد مخفی‌کاریِ لوکیشن نیاز دارن.
+چون وایرگارد با در نظر گرفتن Latency و Fingerprint و Flow Pattern و WebRTC &amp; DNS Leak بهترین روشه.
+پینگ و جیتر خوبی هم داره.
+بعد از سرور ویندوزی یا مرورگر روی سرور، این بهترین روش برای تریدرهای ایرانیه. بعد از WireGuard روش AmneziaVPN با پروتکل AmneziaWG خوبه.
+بعدش دیگه خیلی فرقی بین روش‌ها نیست.</p>
+<p>نکته‌ی مهم: تشخیص اینکه کاربر آیا با VPN به یک وب‌سایت متصل شده یا نه، ساده و راحت است. اینکه لوکیشن دقیق شما را بفهمند، مرحله‌ی بعد است و پیچیدگی‌های خود را دارد. میزان حساسیت به این موضوع به درجه‌ی اهمیت موضوع فعالیتِ سایت میزبان، نوع سرویس و سلیقه‌ی صاحب سایت بستگی دارد.</p>
+<p>منظور از تریدرها، Day Trader ها هستند، نه هولدرها و ایردراپیست‌ها.</p>
+<p>البته ممکنه یه نفر بیاد اینجا بگه:
+"من سه ساله دارم از v2rayNG در بایننس استفاده می‌کنم و هیچ مشکلی نداشتم"
+پاسخ: اوکی.</p>
+<p>آموزش:
+کار رو با پنل X-UI انجام میدیم. تنظیمات مد نظر روی هر متد و اسکریپتی که برای WireGuard نصب می‌کنید، جواب می‌دهد.</p>
+<p>یک inbound مثل تصویر بسازید و مواردی که مشخص شده را عیناً وارد کنید. پورت حتماً باید ۱۱۹۴ باشد.
+برای MTU عدد ۱۲۸۰ مطلوب است، ولی شما روی خط خودتان با اعداد ۱۴۰۰ و ۱۴۲۰ هم تست کنید.</p>
+<p>روش استفاده:
+اپلیکیشن WireGuard برای تمام پلت‌فرم‌‌ها موجود است. اندروید، آیفون، ویندوز، مک و لینوکس.</p>
+<p>پس از ساخت کانفیگ WireGuard در پنل X-UI، روی سه‌نقطه‌ی کنار اینباند کلیک کنید و گزینه‌ی QR Code را انتخاب نمائید. در نسخه‌ی موبایل کافی‌ست روی دکمه‌ی + کلیک کنید و گزینه‌ی Scan from QR code را انتخاب نموده و کد را اسکن کنید.</p>
+<p>برای نسخه‌ی دسکتاپ لازم است که در پنل X-UI روی کد QR کلیک کنید. با کلیک تنظیمات در کلیپ‌بورد ذخیره می‌شود. حالا در برنامه روی دکمه‌ی + بزنید و گزینه‌ی Add Empty Tunnel را انتخاب کنید. یک پنجره باز می‌شود. در فیلد Name یک نام بدهید و در باکس بزرگ پایین که با [Interface] شروع شده است، کل محتوای باکس را پاک کنید و دکمه‌ی Ctrl+V یا همان Paste را بزنید تا تنظیماتی که از پنل X-UI کپی کرده بودید، در باکس قرار گیرد.
+دکمه‌ی Save را بزنید.
+یک کانکشن در پنل سمت چپ ایجاد شده، آن را انتخاب کرده و از سمت راست پنل، دکمه‌ی Activate را بزنید، تمام، وصل می‌شوید.</p>
+<p>کاربران OpenWrt:
+تصویر دوم را مشاهده کنید و در PassWall2 در تب Node List دکمه‌ی Add را بزنید و مثل زیر یک کانفیگ بسازید:</p>
+<p>Type: Xray, Protocol: WireGuard
+Address: Your IP or Domain (Without CDN)
+Port: 1194, Public Key: A, Private Key: B
+Local Address: C and then push the + button
+MTU: 1280, Keep Alive: 25, Save &amp; Apply.
+Enjoy It!</p>
+<p>موفق باشید.</p>
+<p><a href="https://x.com/kevinzakarian/status/1829922286905823280">https://x.com/kevinzakarian/status/1829922286905823280</a></p>
+<h2 id="_14">روی مخابرات و ایرانسل از وایرگارد برای اتصال استفاده کنید با اسکریپت زیر وایرگارد بسازید</h2>
+<p>روی مخابرات و ایرانسل از وایرگارد برای اتصال استفاده کنید با اسکریپت زیر وایرگارد بسازید بعد از طریق برنامه winscp وارد مسیر
+/root/wg0-client-.......conf
+فایل کانفیگ بردارید وارد برنامه وایرگارد کنید
+ رشتو  فیلترشکن  فیلترنت</p>
+<p><a href="https://github.com/angristan/wireguard-install">https://github.com/angristan/wireguard-install</a></p>
+<p><a href="https://threadreaderapp.com/thread/1833382426497700212.html">https://threadreaderapp.com/thread/1833382426497700212.html</a></p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      اخرین بروزرسانی:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 دسامبر 2024</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            برگشت به بالا
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="پاورقی" >
+        
+          
+          <a href="../Warp/" class="md-footer__link md-footer__link--prev" aria-label="قبلی: وارپ" rel="prev">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                قبلی
+              </span>
+              <div class="md-ellipsis">
+                وارپ
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Worker/" class="md-footer__link md-footer__link--next" aria-label="بعدی: Worker" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                بعدی
+              </span>
+              <div class="md-ellipsis">
+                Worker
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyleft &copy; 2024 چو ایران نباشد، تن من مباد
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.sections", "toc.follow", "navigation.top", "content.code.copy", "content.code.select", "content.code.annotate", "content.action.edit", "search.suggest", "search.share", "search.highlight", "announce.dismiss", "navigation.footer", "content.tooltips"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      
+        <script src="../assets/js/site.js"></script>
+      
+    
+  </body>
+</html>
